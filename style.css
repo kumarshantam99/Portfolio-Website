@@ -323,25 +323,25 @@ h1 {
   transition: 0.5s ease-in-out;
 }
 
-.links li:nth-child(1)::hover::before {
+.links li:nth-child(1):hover::before {
   content: "\f09a";
   color: #1da1f2;
   
 }
 
-.links li:nth-child(2)::hover::before {
+.links li:nth-child(2):hover::before {
   content: "\f16d";
   color: #1da1f2;
   
 }
 
-.links li:nth-child(3)::hover::before {
+.links li:nth-child(3):hover::before {
   content: "\f08c";
   color: #1da1f2;
   
 }
 
-.links li:nth-child(4)::hover::before {
+.links li:nth-child(4):hover::before {
   content: "\f09a";
   color: #1da1f2;
   
