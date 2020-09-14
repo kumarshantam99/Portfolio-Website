@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+
+
+}
+body{
+    background: #42275a;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #734b6d, #42275a);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #734b6d, #42275a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+h1{
+    text-align: center;
+    margin-top: 100px;
+    padding: 10px;
+    margin-bottom: 30px;
+    color:whitesmoke;
+    font-weight: 500;
+}
+.post{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.post__image{
+    object-fit: contain;
+    width:200px;
+    height: 200px;
+}
+
+.post__description{
+    
+    width: 500px;
+
+}
+
+.post__description>p{
+    color:whitesmoke;
+    font-size: larger;
+}
+.post__url{
+    color:yellowgreen;
+    font-size: larger;
+    margin-top: 20px;
+}
