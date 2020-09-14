@@ -1,8 +1,13 @@
 body {
   margin: 0;
   padding: 0;
+  content: "Use arrow keys for navigation or click on side navigation bubbles";
 
-  background-color: black;
+  background: #4AC29A;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #BDFFF3, #4AC29A);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #BDFFF3, #4AC29A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
   box-sizing: border-box;
   color: #000;
 
@@ -20,21 +25,26 @@ h1 {
 .s1 {
   background: #16222a;
   /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom,
-      #3a6073,
-      #16222a);
+  background: -webkit-linear-gradient(to bottom, #3a6073, #16222a);
   /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom,
-      #3a6073,
-      #16222a);
+  background: linear-gradient(to bottom, #3a6073, #16222a);
+
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  /*Chrome,Safari*/
+  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0%  100%, 11% 49%, 0% 0%);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
-
-.s1 img {
-  width: 82%;
-  height: 90%;
+.Logo{
+  object-fit: contain;
+  width: 99px;
+  height: 91px;
+}
+.s1>p{
+  margin-top: 15px;
 }
 
 .s2 {
@@ -42,7 +52,6 @@ h1 {
 }
 
 .s4 {
-
   background: #355c7d;
   /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #c06c84, #6c5b7b, #355c7d);
@@ -60,9 +69,19 @@ h1 {
 }
 
 .s7 {
-  background: #DAD299;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to top, #B0DAB9, #DAD299);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to top, #B0DAB9, #DAD299); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #dad299; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #b0dab9,
+    #dad299
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #b0dab9,
+    #dad299
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  display: flex;
 
 }
 
@@ -194,6 +213,25 @@ background: linear-gradient(to top, #B0DAB9, #DAD299); /* W3C, IE 10+/ Edge, Fir
 
 .intro-text {
   font-size: 1.1em;
+  width: 100%;
+  height:170px;
+  overflow: hidden;
+  overflow-y:scroll;
+  padding:10px;
+  border:1px solid greenyellow;
+  
+  
+}
+
+.intro-text2 {
+  font-size: 1.1em;
+  width: 100%;
+  
+  padding:10px;
+  margin-top: 20px;
+  border:1px solid greenyellow;
+  
+  
 }
 
 .test-card {
@@ -207,7 +245,7 @@ background: linear-gradient(to top, #B0DAB9, #DAD299); /* W3C, IE 10+/ Edge, Fir
   border-radius: 40px;
   color: rgb(94, 134, 0);
   box-shadow: -15px -15px 35px rgba(255, 255, 255, 1),
-    15px 15px 35px rgba(0, 0, 0, 0.5);
+    5px 5px 25px rgba(0, 0, 0, 0.5);
 }
 
 .test-card:hover {
@@ -216,12 +254,12 @@ background: linear-gradient(to top, #B0DAB9, #DAD299); /* W3C, IE 10+/ Edge, Fir
 }
 
 #fp-nav ul li .fp-tooltip.fp-right {
-  right: 10px;
-  color: rgb(65, 155, 92);
+  right: 15px;
+  color: rgba(255, 38, 56, 0.774);
 }
 
 .fp-slidesNav.fp-bottom {
-  margin-left: 10em !important;
+  margin-left: 11em !important;
 }
 
 .fp-controlArrow {
@@ -237,8 +275,9 @@ background: linear-gradient(to top, #B0DAB9, #DAD299); /* W3C, IE 10+/ Edge, Fir
 .intro-card {
   width: 370px;
   margin: 5px;
-  height: 95%;
-  padding: 29px 29px;
+
+  height: 100%;
+  padding: 1% 1%;
   background: #f6e58d;
   display: block;
   position: absolute;
@@ -247,7 +286,17 @@ background: linear-gradient(to top, #B0DAB9, #DAD299); /* W3C, IE 10+/ Edge, Fir
   box-shadow: -15px -15px 35px rgb(224, 204, 116),
     15px 15px 35px rgba(0, 0, 0, 0.5);
 }
+.test-img>img{
+  
+  position: relative;
+  object-fit: contain;
+  width: 330px;
+  height: 500px;
+  align-items: center;
+  margin-left:2px;
+  border-radius: 10px;
 
+}
 .intro-card:hover {
   box-shadow: inset -10px -10px 20px rgba(231, 222, 87, 0.5),
     inset 10px 10px 30px rgba(0, 0, 0, 0.05);
@@ -292,57 +341,172 @@ background: linear-gradient(to top, #B0DAB9, #DAD299); /* W3C, IE 10+/ Edge, Fir
   height: 100%;
   object-fit: cover;
 }
-
-.links li {
+.sl7{
   position: relative;
+  display: flex;align-items: center;justify-content: center;flex-direction: column;
+}
+
+.links{
+  position:absolute;
+  
+}
+.links li {
+  
+  
 
   list-style: none;
-  margin: 10px 20px;
+  margin: 0px 10px;
   cursor: pointer;
+  padding: 10px;
 }
 
 .links li a {
   text-decoration: none;
 }
 
+
 .links li a .fa {
   font-size: 6em;
   color: #222;
 }
-
-.links li::before {
-  font-family: fontAwesome;
-  position: absolute;
-  top: 0;
-  left: 0;
-  font-size: 6em;
-  height: 0;
-  overflow: hidden;
-  transition: 0.5s ease-in-out;
+.fa-facebook{
+  margin-left:20px;
+}
+.fa-instagram{
+  margin-left:5px;
+}
+.fa-linkedin-square{
+  margin-left:5px;
+}
+.fa-facebook:hover{
+  transform: scale(1.10);
+  color:blue !important;
 }
 
-.links li:nth-child(1):hover::before {
-  content: "\f09a";
-  color: #1da1f2;
+.fa-instagram:hover{
+  transform: scale(1.10);
+  color:red !important;
+}
+.fa-linkedin-square:hover{
+  transform: scale(1.10);
+  color:white !important;
+}
+
+.fa-envelope:hover{
+  transform: scale(1.10);
+  color:rgb(23, 6, 99) !important;
+}
+.fa-mobile{
+  margin-left:30px;
+}
+
+.fa-mobile:hover{
+  transform: scale(1.10 );
   
+  color:rgb(118, 138, 3) !important;
 }
 
-.links li:nth-child(2):hover::before {
-  content: "\f16d";
-  color: #1da1f2;
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+.intro-text::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+.intro-text::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+.intro-text::-webkit-scrollbar-thumb {
+  background: rgb(129, 138, 5); 
+}
+
+/* Handle on hover */
+.intro-text::-webkit-scrollbar-thumb:hover {
+  cursor: grab;
+  background: #555; 
+}
+
+
+.blog{
+  display: flex;
+  width:600px;
+  height:600px;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-evenly;
+  border: 1px solid white;
+  padding:10px;
+  background-color: wheat;
+  box-shadow: -15px -15px 20px rgba(255, 255, 255, 0.7),10px 10px 19px rgba(0, 0, 0, 0.7);
+ 
+
+}
+.blog:hover {
+  box-shadow: inset -5px -5px 10px rgba(255, 255, 255, 0.52),
+    inset 5px 5px 15px rgba(0, 0, 0, 0.39);
+}
+
+.blog__image{
+  width:300px;
+  height:300px;
+
+}
+.blog__top{
+  flex-direction: row !important;
+  justify-items: center;
+  align-items: center;
   
+ 
 }
-
-.links li:nth-child(3):hover::before {
-  content: "\f08c";
-  color: #1da1f2;
-  
+.hits{
+  margin-left:0Spx;
 }
+@media only screen and (max-width: 600px) {
+  .s1{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+  }
+  .Logo{
+    object-fit: contain;
+    width:65px;
+    height: 50px;
+    
 
-.links li:nth-child(4):hover::before {
-  content: "\f09a";
-  color: #1da1f2;
-  
+  }
+  .s1 > img{
+    object-fit: contain;
+    width:95%;
+    height:95%;
+    align-items: center;
+
+  }
+  .intro-text{
+    height:140px;
+  }
+  .intro-text2{
+    padding:5px;
+  }
+  #fp-nav{
+    display: none;
+  }
+  .fp-slidesNav.fp-bottom{
+    margin-bottom:-15px !important;
+  }
+  .blog{
+    width: 90%;
+    height: 90vh;
+  }
+ 
 }
-
-
